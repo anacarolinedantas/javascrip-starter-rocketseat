@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    <script>
+        function temHabilidade(skills) {
+            var possui = skills.indexOf("Javascript", 0)
+            if (possui == -1) {
+                console.log(false)
+            }
+            else {
+                console.log(true)
+            }
+        }
+        
+        var skills = ["ReactJS", "React Native", "Javascript"];
+        temHabilidade(skills); // true ou false
+
+    </script>
+</body>
+</html>

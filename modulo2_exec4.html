@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 4</title>
+</head>
+<body>
+  <input type="text" name="nome">
+  <button id="botao">Adicionar</button>
+  <ul></ul>
+    
+  <script>
+    var nomes = ['Diego', 'Gabriel', 'Lucas'];
+    var listElement = document.querySelector('ul')
+    var bntElement = document.querySelector('button')
+    var inputElement = document.querySelector('input')
+  
+    function addNome(nome) {
+      var liElement = document.createElement('li');
+      var textElement = document.createTextNode(nome);
+          
+      liElement.appendChild(textElement);
+      listElement.appendChild(liElement);
+    }
+
+    bntElement.onclick = function adicionar() {
+      addNome(inputElement.value)
+      inputElement.value = ""
+    }
+
+    for (const nome of nomes) {
+      addNome(nome)
+    }
+      
+  </script>
+    
+</body>
+</html>
